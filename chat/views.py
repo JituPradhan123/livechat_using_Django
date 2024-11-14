@@ -34,6 +34,7 @@ def MessageView(request, room_name, username):
     
     context = {
         "messages": get_messages,
-        "user":username
+        "user":username,
+        "room": get_room
     }
     return render(request, 'message.html', context)
